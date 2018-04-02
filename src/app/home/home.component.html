@@ -1,0 +1,61 @@
+    <!-- Page Content -->
+    <div class="container">
+      <h1 class="mt-5" style="text-align:center; ">Efrat's Car Rental</h1>
+	  
+	  <div class="row"  style="margin-top:30px;">
+		<div class="col-lg-4" >
+			<div class="words-from-ceo">
+				<br/>
+				<h2>Few words about us</h2>
+				<br/>
+				<br/>			
+				<p>we are a young and dynamic company that concentrates on customer service. 
+				Working in the market since 2012 with a high quality record and great experience.
+
+				Hope you will enjoy the experience of use and service like previous customers.
+				We are here for everything, feel free to contact us around the clock.
+				</p>
+			
+			</div>
+			
+		</div>
+		<div class="col-lg-4">
+		  <img src="assets/images/car.jpg" width="350" height="400" alt="">
+		  <!-- <img src="{{image}}" width="350" height="400" alt=""> -->
+		
+		</div>
+		<div class="col-lg-4">
+			<div class="words-from-ceo">
+				<h2>Don't want to go Car rent shop?</h2>
+				<h4>Not a problem let's do it online</h4>
+				<hr>
+				<hr>
+				
+				<a routerLink="signUp"><font size="7">Sign Up</font></a>
+				<br/>
+        <a routerLink="signIn"><font size="7">Sign In</font></a>
+        
+				<!-- <br/>
+				<a href="#"><font size="7">Order a vehicle</font></a> -->
+				<br/>
+				<a routerLink="OrderListUser" *ngIf="Type_Role=='Customer'"><font size="7">User Area</font></a>
+				<br/>
+				<!-- <a routerLink="signUp" *ngIf="Type_Role=='Empolyee'"><font size="7">Empolyee Area</font></a> -->
+				<!-- <a href="employeeArea.html" *ngIf="initialArray.IsRegistered"><font size="7">Employee Area</font></a> -->
+				<!-- <br/> -->
+				<a routerLink="adminArea" *ngIf="Type_Role=='Admin'"><font size="7">Admin Area</font></a>
+				<!-- <a href="adminArea.html" *ngIf="initialArray.IsRegistered"><font size="7">Admin Area</font></a> --> 
+			
+			
+			</div>
+
+
+		
+		</div>
+		
+	  
+	  </div>
+	  
+	  
+    </div>
+   

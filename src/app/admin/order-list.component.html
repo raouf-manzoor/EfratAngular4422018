@@ -1,0 +1,49 @@
+    <!-- Page Content -->
+    <div class="container">
+      <h1 class="mt-5" style="text-align:center;">Efrat's Car Rental</h1>
+	  <h2 class= "mt-5" style="text-align:center;"> List of Orders </h2>
+		
+		<table style="width:100%; margin-top:40px;">
+		  
+		  <tr >
+			<th style="padding: 5px; text-align:center;">Manufacture Name</th> 
+			<th style="padding: 5px; text-align:center;">Car Name</th>
+			<th style="padding: 5px; text-align:center;">Car Plate Number</th>
+			<th style="padding: 5px; text-align:center;">User Id/Name</th>
+			<th style="padding: 5px; text-align:center;">Current KM</th>
+			<th style="padding: 5px; text-align:center;">Branch</th>
+			<th style="padding: 5px; text-align:center;">Start Date</th>
+			<th style="padding: 5px; text-align:center;">End Date</th>
+			<th style="padding: 5px; text-align:center;">Return Date</th>
+			<th style="padding: 5px; text-align:center;">Available</th>
+			<th style="padding: 5px; text-align:center;">Photo</th>
+			
+			
+		  </tr>
+
+		 
+		  <tr *ngFor="let row of OrdersList">
+		  
+			<td style="padding: 5px; text-align:center;" > {{row.ManufactorName}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.Model}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.CarNumber}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.UserName}} </td>
+			<td style="padding: 5px; text-align:center;" width="70%"> <input type="text" name="CurrentKM" [(ngModel)]="row.CurrentKM"> </td>
+			<td style="padding: 5px; text-align:center;"> {{row.Branch}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.StartDate}}</td>
+      <td style="padding: 5px; text-align:center;"> {{row.EndDate}}</td>
+      <td> <input type="date" placeholder="Return Date" name="ReturnDate" [(ngModel)]="row.ReturnDate"></td>
+			<td align="center"> <input style="height: 50px;width: 80px" type="Button" (click)="setToAvailable(row)"  value="Submit" />&nbsp;</td>	
+			<td style="padding: 5px; text-align:center;"> <a href="placeAnOrder.html"> <img src="{{row.Base64Image}}" alt="" border=3 height=100 width=250></a> </td>			
+     
+			
+			
+		  </tr>
+
+
+		</table>
+		
+	  
+	  
+    </div>
+   

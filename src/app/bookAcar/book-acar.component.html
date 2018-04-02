@@ -1,0 +1,73 @@
+    <!-- Page Content -->
+    <div class="container">
+      <h1 class="mt-5" style="text-align:center;">Efrat's Car Rental</h1>
+	  <h2 class= "mt-5" style="text-align:center;"> Enter Branch  </h2>
+		<div style="text-align:center">
+			Select One BRanch
+				<select   [(ngModel)]='BranchID' [ngModelOptions]="{standalone: true}" (change)="BranchChanged()">
+						<option class='option' *ngFor='let option of Locations' [value]="option.BranchID">{{option.BranchName}}</option>
+					</select>
+			<!-- <select>
+				<option value="Select One Branch"> Select One Branch </option>
+				<option value="branch 2">Branch 1</option>
+				<option value="branch 3">Branch 2</option>
+				<option value="branch 4">Branch 3</option>
+			</select> -->
+		</div>
+		
+		<table style="width:100%; margin-top:40px;">
+		  <tr>
+			<th style="padding: 5px; text-align:center;">Manufacture Name</th> 
+			<th style="padding: 5px; text-align:center;">Model</th>
+			<th style="padding: 5px; text-align:center;">Cost/Day</th>
+			<th style="padding: 5px; text-align:center;">Delay Cost/Day</th>
+			<th style="padding: 5px; text-align:center;">Gere</th>
+			<th style="padding: 5px; text-align:center;">Year of Product</th>
+			<th style="padding: 5px; text-align:center;">Branch</th>
+			<th style="padding: 5px; text-align:center;">Image</th>
+
+		  </tr>
+
+		  	  
+		  <tr *ngFor="let row of AvailableCars">
+			<td style="padding: 5px; text-align:center;"> {{row.ManufactorName}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.Model}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.CostPerDay}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.CostPerDayDelay}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.Gere}}</td>
+			<td style="padding: 5px; text-align:center;"> {{row.YearOfProduce}} </td>
+			<td style="padding: 5px; text-align:center;"> {{row.BranchName}} </td>
+			<!-- <td style="padding: 5px; text-align:center;"> <a routerLink="PlaceAnOrder"><img src="{{row.Base64Image}}" alt="" border=3 height=100 width=250/></a>  </td>			 -->
+			<td style="padding: 5px; text-align:center;"> <a (click)="PlaceAnOrder(row)"><img src="{{row.Base64Image}}" alt="" border=3 height=100 width=250/></a>  </td>			
+		  </tr>
+
+		  
+		  <!-- <tr>
+			<td style="padding: 5px; text-align:center;"> Mercedes </td>
+			<td style="padding: 5px; text-align:center;"> Benz </td>
+			<td style="padding: 5px; text-align:center;"> 300</td>
+			<td style="padding: 5px; text-align:center;"> 350 </td>
+			<td style="padding: 5px; text-align:center;"> Auto </td>
+			<td style="padding: 5px; text-align:center;"> 2016</td>
+			<td style="padding: 5px; text-align:center;"> Branch 1 </td>
+			<td style="padding: 5px; text-align:center;"> <a href="placeAnOrder.html"> </a><img src="assets/images/mercedes-benz.png" alt="" border=3 height=100 width=250/> </td>			
+		  </tr> -->
+		  
+		  
+		  <!-- <tr>
+			<td style="padding: 5px; text-align:center;"> Suzuki</td>
+			<td style="padding: 5px; text-align:center;"> Wagon R </td>
+			<td style="padding: 5px; text-align:center;"> 17</td>
+			<td style="padding: 5px; text-align:center;"> 20 </td>
+			<td style="padding: 5px; text-align:center;"> Auto </td>
+			<td style="padding: 5px; text-align:center;"> 2018</td>
+			<td style="padding: 5px; text-align:center;"> Branch 1 </td>
+			<td style="padding: 5px; text-align:center;"> <a href="placeAnOrder.html"></a> <img src="assets/images/wagon-r.png" alt="" border=3 height=100 width=250/> </td>			
+		  </tr> -->
+		</table>
+		
+	  
+	  
+    </div>
+   
+

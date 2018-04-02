@@ -1,0 +1,29 @@
+     <!-- Page Content -->
+    <div class="container">
+      <h1 class="mt-5" style="text-align:center;">Efrat's Car Rental</h1>
+	  
+	  <div class="row"  style="margin-top:30px;">
+		<div class="col-lg-6" >
+			<div class="" style="border:1px solid #ccc; 	background:#99ddff;">
+				<br/>
+				<h2>Sign In</h2>
+				<input type="text" name="Email" [(ngModel)]="user.Email" placeholder="username">
+				<input type="password" name="Password" [(ngModel)]="user.Password" placeholder="password">
+				<button class="btn success" (click)="signIn()" >Sign In</button>
+
+			</div>
+			
+		</div>
+		<div class="col-lg-6">
+          <img src="assets/images/car.jpg" height="400" alt="">
+		
+		</div>
+		
+	  
+	  </div>
+	  
+	  
+    </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
